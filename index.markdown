@@ -4,3 +4,28 @@
 
 layout: home
 ---
+
+# Syllabus
+
+# Class Materials
+
+### Slides
+- Section 1: Introduction
+- Section 2: Tree Methods, Bagging, and Boosting
+- Section 3: Regression
+- Section 4: Classification
+- Section 5: (A Brief Intro To) Neural Nets
+
+### Datasets
+
+# Additional Resources
+
+# Class Recordings
+
+# Assignments
+
+
+
+
+
+
