@@ -14,3 +14,8 @@ jobs:
         with:
           files: data/
           dest: data.zip
+      - uses: EndBug/add-and-commit@v7
+        with:
+          add: '["data.zip"]'
+          message: 'Update data archive'
+          push: true
