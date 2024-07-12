@@ -2,8 +2,9 @@ name: Zip Files
 
 on:
   workflow_dispatch:
-  release:
-    types: [published]
+  push:
+    paths:
+      - data/**
 
 jobs:
   zip-files:
