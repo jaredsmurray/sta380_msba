@@ -18,6 +18,8 @@ layout: home
 
 ### Datasets
 
+Individual datasets are [here](data/), or you can download them all [here](data.zip).
+
 # Additional Resources
 
 # Class Recordings
