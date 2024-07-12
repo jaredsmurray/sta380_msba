@@ -18,7 +18,7 @@ layout: home
 
 ### Datasets
 
-Individual datasets are [here](data/), or you can download them all [here](data.zip).
+Individual datasets are [here](https://github.com/jaredsmurray/sta380_msba/tree/main/data/), or you can download them all [here](data.zip).
 
 # Additional Resources
 
