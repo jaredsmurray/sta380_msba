@@ -21,6 +21,10 @@ Please contact me via Canvas message (this helps me prioritize you in my inbox).
 
 Individual datasets are [here](https://github.com/jaredsmurray/sta380_msba/tree/main/data/), or you can download them all [here](data.zip).
 
+### R/Rmarkdown code for textbook labs
+
+See [here](https://www.statlearning.com/resources-second-edition) (under "Rmarkdown files") for completed versions of the labs at the end of each chapter in the text. These are excellent annotated examples that will help you with the takehome problems and projects. Code accompanying lecture slides is below, but for many topics these completed labs are more accessible/adaptable.
+
 ### Section 1: Introduction
 
 - [Slides](slides/01-Intro.pdf)
@@ -33,18 +37,30 @@ Individual datasets are [here](https://github.com/jaredsmurray/sta380_msba/tree/
 
 ### Section 3: Regression
 
-- [Slides]()
-- [R code]()
+- [Overview](slides/03-Regression.pdf)
+- [R code](R/msba_regression.R)
+
+- [Nonlinearity](slides/nonlinear.pdf)
+- [R code](R/nonlinear.R)
+
+- [Categorical predictors](slides/dummy_variables.pdf)
+- [R code](R/dummy_variables.R)
+
+- [Interactions](slides/interactions.pdf)
+- [R code](R/interactions.R)
+
+- [Building regresion models for prediction](slides/03-Building-Regression.pdf)
+- [R code](R/building_regression.R)
 
 ### Section 4: Classification
 
-- [Slides]()
-- [R code]()
+- [Slides](slides/04-Classification.pdf)
+- [R code](R/Classification_MSBA.R), [ClassificationFunctions](R/ClassificationFunctions.R)
 
 ### Section 5: (A Brief Intro To) Neural Nets
 
-- [Slides]()
-- [R code]()
+- [Slides](slides/05-NN.pdf)
+- [R code](R/NN_MSBA.R)
 
 ### Class Recordings
 
@@ -52,7 +68,7 @@ See Canvas.
 
 # Assignments
 
-- [Take-home problems](files/takehome.pdf). Start working on these early!
+- [Take-home problems](files/takehome.pdf). Start working on these early! You can use [this Rmarkdown template](files/template.Rmd).
 - [Individual prediction project (and contest!)](files/individual_project.pdf) Data: [austinhouses.csv](data/austinhouses.csv), [austinhouses_holdout.csv](data/austinhouses_holdout.csv)
 - [Group project](files/group_project.pdf)
 
