@@ -59,6 +59,7 @@ See Canvas.
 # R/Rstudio Resources
 
 - [Rstudio](https://posit.co/download/rstudio-desktop/). A cross-platform IDE for writing R code.
+- [Tutorial](R/Tutorial.pdf) A brief intro to R.
 - [Irizarry, "Introduction to Data Science (Data Wrangling and Visualization with R)"](https://rafalab.dfci.harvard.edu/dsbook-part-1/). An excellent reference for modern data science in R using the `ggplot2` and `tidyverse` libraries. 
 
 # Additional Resources
