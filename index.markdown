@@ -24,12 +24,12 @@ Individual datasets are [here](https://github.com/jaredsmurray/sta380_msba/tree/
 ### Section 1: Introduction
 
 - [Slides](slides/01-Intro.pdf)
-- [R code]()
+- [R code](R/Intro.R)
 
 ### Section 2: Tree Methods, Bagging, and Boosting
 
 - [Slides](slides/02-Trees.pdf)
-- [R code]()
+- [R code](R/Trees_MSBA.R), [California setup](R/cal_setup.txt), [BART example](R/BART_example.R)
 
 ### Section 3: Regression
 
