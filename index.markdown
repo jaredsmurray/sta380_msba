@@ -48,11 +48,7 @@ Individual datasets are [here](https://github.com/jaredsmurray/sta380_msba/tree/
 
 ### Class Recordings
 
-Week 1: 7/15 7/16 7/17 7/18
-
-Week 2: 7/22 7/23 7/24 7/25
-
-
+See Canvas.
 
 # Assignments
 
