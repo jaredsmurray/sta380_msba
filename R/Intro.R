@@ -2,8 +2,6 @@ library(MASS) ## a library of example datasets
 library(class) ## a library with lots of classification tools
 library(kknn) ## knn library
 
-
-
 attach(Boston)
 n <- dim(Boston)[1]
 

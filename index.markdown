@@ -9,7 +9,9 @@ layout: home
 
 # Contact and office hours
 
-Please contact me via Canvas message (this helps me prioritize you in my inbox). Office hours will be via Zoom, this page will be updated with times and a link.
+Please contact me via Canvas message (this helps me prioritize you in my inbox).
+
+Office Hours: Tuesday/Thursday 12-2PM [on Zoom](https://utexas.zoom.us/j/97018791977)
 
 # Class Materials
 
