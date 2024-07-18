@@ -35,7 +35,7 @@ See [here](https://www.statlearning.com/resources-second-edition) (under "Rmarkd
 ### Section 2: Tree Methods, Bagging, and Boosting
 
 - [Slides](slides/02-Trees.pdf)
-- [R code](R/Trees_MSBA.R), [California setup](R/cal_setup.txt), [BART example](R/BART_example.R), [caret in Boston housing data](R/caret_ex.R)
+- [R code](R/Trees_MSBA.R), [California setup](R/cal_setup.txt), [BART example](R/BART_example.R), [caret in Boston housing data](R/caret_example.R)
 
 ### Section 3: Regression
 
