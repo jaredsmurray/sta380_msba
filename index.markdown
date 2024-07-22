@@ -37,6 +37,10 @@ See [here](https://www.statlearning.com/resources-second-edition) (under "Rmarkd
 - [Slides](slides/02-Trees.pdf)
 - [R code](R/Trees_MSBA.R), [California setup](R/cal_setup.txt), [BART example](R/BART_example.R), [caret in Boston housing data](R/caret_example.R)
 
+### Section 2.1: Overview of classification
+- [Slides](slides/classification_intro.pdf)
+- [R code](R/caret_classification_example.R)
+
 ### Section 3: Regression
 
 - [Overview](slides/03-Regression.pdf)
