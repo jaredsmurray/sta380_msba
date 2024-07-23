@@ -14,7 +14,11 @@ data(Default)
 
 # caret will treat the first level as "positive", here I 
 # make sure that Yes = positive for performance metrics
-Default$default = factor(Default$default, levels=c("Yes", "No"))
+Default$default = factor(Default$default, 
+                         levels=c("Yes", "No"))
+
+Default  = Default %>% 
+  mutate(default = factor(default, levels=c("Yes","No")))
 
 set.seed(18)
 
@@ -149,11 +153,11 @@ best_pars = gbmfit$bestTune
 best_preds = gbmfit$pred %>% filter(n.trees==best_pars$n.trees, 
                                       interaction.depth==best_pars$interaction.depth)
 
-gbm_lift = caret::lift(pred~Yes, data=best_preds)
+gbm_lift = caret::lift(obs~Yes, data=best_preds)
 
 ggplot(gbm_lift) + 
   geom_abline(slope=1, linetype='dotted') +
-  xlim(c(0, 10)) + 
+  xlim(c(0, 100)) + 
   theme_bw()
 
 # Calibration plot
@@ -161,7 +165,9 @@ ggplot(gbm_lift) +
 gbm_cal = caret::calibration(obs~Yes, data=best_preds, cuts=7)
 ggplot(gbm_cal) + theme_bw()
 
-#### Holdout set results
+############################################################################
+# Holdout set results
+############################################################################
 
 test_probs = predict(gbmfit, newdata=default_test, type="prob")
 
@@ -174,7 +180,7 @@ get_metrics = function(threshold, test_probs, true_class,
 }
 
 # Get metrics for a given threshold
-get_metrics(0.75, test_probs, default_test$default, "Yes", "No")
+get_metrics(0.5, test_probs, default_test$default, "Yes", "No")
 
 # Compute metrics on test data using a grid of thresholds
 thr_seq = seq(0, 1, length.out=500)
@@ -204,30 +210,5 @@ ggplot(gbm_oos_lift) +
 # Calibration
 
 gbm_cal = caret::calibration(default_test$default~test_probs[,1], 
-                             data=best_preds, cuts=11)
+                             data=best_preds, cuts=7)
 ggplot(gbm_cal) + theme_bw()
-
-
-stop()
-
-# Extract out-of-sample predicted probs for the optimal model
-# best_pars = gbmfit$bestTune
-# best_preds = gbmfit$pred %>% filter(n.trees==best_pars$n.trees, 
-#                                       interaction.depth==best_pars$interaction.depth)
-
-# We can extract more information using the MLeval package
-gbm_perf = evalm(gbmfit, showplots=FALSE)
-
-# The return object contains ggplot objects you can customize
-gbm_perf$roc + 
-  ggtitle("ROC curve for GBM") +
-  theme_bw() 
-
-gbm_perf$proc + 
-  ggtitle("Precision/recall curve for GBM") +
-  theme_bw() 
-
-gbm_perf$cc + 
-  ggtitle("Calibration curve for GBM")
-
-
