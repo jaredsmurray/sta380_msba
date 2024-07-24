@@ -6,7 +6,7 @@ rm(list=ls())
 library(glmnet)
 
 
-ca <- read.csv("CAhousing.csv")
+ca <- read.csv("~/Dropbox/teaching/MSBA 2024/website/data/CAhousing.csv")
 logMedVal <- log(ca$medianHouseValue)
 
 ca <- ca[,-c(4,5,9)] # lose lmedval and the room totals
@@ -27,10 +27,7 @@ regForward = step(null, scope=formula(full), direction="forward", k=log(length(t
 regBack = step(full, direction="backward", k=log(length(tr)))
 regForward = step(null, scope=formula(full), direction="both", k=log(length(tr)))
 
-
-
 XXca = scale(XXca)
-
 
 Lasso.Fit = glmnet(XXca[tr,],logMedVal[tr])
 Ridge.Fit = glmnet(XXca[tr,],logMedVal[tr],alpha=0)
@@ -44,7 +41,6 @@ CV.R = cv.glmnet(XXca[tr,], logMedVal[tr],alpha=0)
 
 LamR = CV.R$lambda.1se
 LamL = CV.L$lambda.1se
-
 
 par(mfrow=c(1,2))
 plot(log(CV.R$lambda),sqrt(CV.R$cvm),main="Ridge CV (k=10)",xlab="log(lambda)",ylab = "RMSE",col=4,type="b",cex.lab=1.2)
@@ -67,7 +63,6 @@ rm(list=ls())
 
 food = read.csv("protein.csv", row.names=1) # 1st column is country name
 xfood = scale(food) 
-
 
 ### PCA ###
 pcfood <- prcomp(xfood, scale=TRUE)

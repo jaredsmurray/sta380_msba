@@ -113,7 +113,7 @@ plot(gbmfit)
 confusionMatrix(gbmfit)
 
 thresholder(gbmfit, 
-            threshold = 0.5, 
+            threshold = 0.9, 
             final = TRUE,
             statistics = c("Sensitivity",
                            "Specificity"))
@@ -140,7 +140,7 @@ ggplot(aes(x=prob_threshold, y=value, color=name),
 
 # How do we get points on the ROC curve? One (TPR, FPR) pair for each threshold
 
-thres = 0.1
+thres = 0.5
 tp = gbmfit_res %>% 
   dplyr::filter(prob_threshold==thres) %>% 
   dplyr::select(prob_threshold, Sensitivity, Specificity) %>%
@@ -198,7 +198,7 @@ gbm_lift = caret::lift(obs~Yes, data=best_preds)
 ggplot(gbm_lift) + 
   geom_abline(slope=1, linetype='dotted') +
   xlim(c(0, 100)) + 
-  theme_bw()
+  theme_bw() + xlim(0,10)
 
 # Calibration plot
 
