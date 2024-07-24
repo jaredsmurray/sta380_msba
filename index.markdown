@@ -58,6 +58,8 @@ See [here](https://www.statlearning.com/resources-second-edition) (under "Rmarkd
 - [Building regresion models for prediction](slides/03-Building-Regression.pdf)
 - [R code](R/building_regression.R)
 
+- **In-class examples**: [Austin houses MLR](R/ah_linreg_ex.R) [Shrinkage, selection, and dimension reduction](R/caret_dimred.R)
+
 ### Section 4: Classification
 
 - [Slides](slides/04-Classification.pdf)
